@@ -21,29 +21,17 @@ section.home {
             letter-spacing: normal;
             margin: 0 7px;
             padding: 12px 0;
-            position: relative; /* Allows for custom animations */
             .btn {
-                height: 21px;
-                margin: 0;
-                background-color: #04163d;
                 line-height: 20px;
+                padding: 9px 17px;
                 font-size: 14px;
-                border: none;
+                border-radius: 6px;
                 font-weight: 500;
-                color: #fff; /* Default text color */
-                position: relative;
-                z-index: 1;
-                transition: color 0.4s ease; /* Smooth color transition */
-                /* Optional padding and display adjustments */
-                /* padding: 9px 17px; */
-                /* display: block; */
+                display: block;
             }
-
-            /* Unique hover effects */
             &:hover .btn {
                 color: #ff0000; /* Unique hover text color */
             }
-
             &:before, &:after {
                 content: "";
                 position: absolute;
@@ -55,7 +43,6 @@ section.home {
                 transform: scaleX(0); /* Hidden by default */
                 z-index: 0;
             }
-
             &:before {
                 top: 0; /* Top border */
                 transform-origin: left; /* Animation from left to right */
