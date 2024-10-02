@@ -20,7 +20,32 @@ header.global-header {
             @include media-breakpoint-up(lg) {
                 margin: 0;
                 margin: 20px 0 0;
-            }
+            }.header-logo {
+    margin: 0;
+    display: flex;              // Flexbox for alignment
+    justify-content: center;     // Centers content horizontally
+    align-items: center;         // Centers content vertically
+
+    a {
+        margin: 15px 0 15px 35px; // Initial margin for smaller screens
+        height: auto;
+
+        @include media-breakpoint-up(lg) {
+            margin: 0;            // Reset margin for large screens
+            margin: 20px 0 0;
+        }
+
+        .logo {
+            height: 50px;
+            margin: 0;
+        }
+    }
+
+    .course-header {
+        display: none;
+    }
+}
+
             .logo {
                 height: 50px;
                 margin: 0;
