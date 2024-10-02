@@ -15,37 +15,21 @@ header.global-header {
     .header-logo {
         margin: 0;
         a {
-            margin: 15px 0 15px 35px;
+            margin: 0px 0 20px 35px;
             height: auto;
             @include media-breakpoint-up(lg) {
                 margin: 0;
                 margin: 20px 0 0;
-    .header-logo {
-    margin: 0;
-    display: flex;                // Enables flexbox for layout
-    justify-content: center;       // Horizontally centers the content
-    align-items: center;           // Vertically centers the content
-    flex-direction: column;        // Stack items vertically if needed
-
-    a {
-        margin: 0 0 20px 35px;     // Adds left margin of 35px and bottom margin of 20px
-        height: auto;              // Sets height to auto for scaling
-
-        @include media-breakpoint-up(lg) {
-            margin: 0 0 20px 0;    // On larger screens, center the a tag by resetting left margin
+            }
+            .logo {
+                height: 50px;
+                margin: 0;
+            }
         }
-
-        .logo {
-            height: 50px;          // Sets the logo height
-            margin: 0;             // Resets margin for the logo itself
+        .course-header {
+            display: none;
         }
     }
-
-    .course-header {
-        display: none;             // Hides course-header element
-    }
-}
-
     .nav-links {
         .main {
             margin: 0 0 0 38px;
