@@ -14,10 +14,9 @@ from openedx.core.djangolib.markup import HTML, Text
         <div class="outer-wrapper">
     <img class="bander" src="${static.url('images/bonder.jpg')}"  />
     <div class="overlay-content">
-        <h1 class="overlay-text">Welcome to Our Platform</h1>
+        <h1 class="overlay-text">{{ INDIGO_WELCOME_MESSAGE }}</h1>
         <div class="button-holder">
             <button class="action-button">Get Started</button>
-            <button class="action-button">Learn More</button>
         </div>
     </div>
 </div>
