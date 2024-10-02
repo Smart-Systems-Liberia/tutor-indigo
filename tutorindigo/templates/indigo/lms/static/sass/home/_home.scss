@@ -7,9 +7,59 @@ section.home {
 .home>header .title {
     background: none !important;
 }
-.home>header .outer-wrapper {
-    max-width: 100%;
+.outer-wrapper {
+    position: relative; /* Allow absolute positioning for child elements */
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 70vh; /* Reduce the height to 70% of the viewport */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    width: 100vw; /* Make sure the outer-wrapper takes the full width of the screen */
+    overflow: hidden; /* Prevent any overflow of content */
 }
+
+.bander {
+    position: absolute; /* Position image behind overlay */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure the image takes the full width of the screen */
+    height: 100%; /* Cover the entire height of the outer-wrapper */
+    object-fit: cover; /* Ensure the image covers the entire area without distortion */
+}
+
+.overlay-content {
+    position: relative; /* Position text and buttons relative to the outer wrapper */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    z-index: 1; /* Ensure overlay content is above the image */
+}
+
+.overlay-text {
+    font-size: 2rem; /* Size of the overlay text */
+    margin: 20px 0; /* Margin around the text */
+}
+
+.button-holder {
+    display: flex; /* Flexbox for button layout */
+    justify-content: center; /* Center buttons horizontally */
+    gap: 15px; /* Space between buttons */
+}
+
+.action-button {
+    background-color: #04163d; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding around the button text */
+    font-size: 1rem; /* Font size for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+    
+    &:hover {
+        background-color: #ff0000; /* Change background color on hover */
+    }
+}
+
 .global-header .nav-links .secondary {
     .btn-holder {
         letter-spacing: -.32em;
