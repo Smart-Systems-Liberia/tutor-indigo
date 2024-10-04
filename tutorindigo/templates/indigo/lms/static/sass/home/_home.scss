@@ -27,6 +27,9 @@ section.home {
     height: 100%; /* Cover the entire height of the outer-wrapper */
     object-fit: cover; /* Ensure the image covers the entire area without distortion */
 }
+.bander img{
+    width:100%;
+}
 
 .overlay-content {
     position: relative; /* Position text and buttons relative to the outer wrapper */
@@ -38,6 +41,7 @@ section.home {
 .overlay-text {
     font-size: 2rem; /* Size of the overlay text */
     margin: 20px 0; /* Margin around the text */
+    color: red;
 }
 
 .button-holder {
