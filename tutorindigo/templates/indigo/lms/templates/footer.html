@@ -21,26 +21,68 @@
       dir=${bidi}
     % endif
   >
-  <div class="footer-top">
-    <div class="powered-area">
+  <div class="footer-top container col-12">
+    <div class="powered-area col-4">
       ## Please leave this link and use one of the logos provided
       ## The OpenEdX link may be hidden when this view is served
       ## through an API to partner sites (such as marketing sites or blogs),
       ## which are not technically powered by OpenEdX.
       % if not hide_openedx_link:
       <ul class="logo-list">
-        <li>Powered by:</li>
-        <li>
+        <!-- <li>Powered by:</li> -->
+        <!-- <li>
           <a href="https://docs.tutor.edly.io" rel="noopener" target="_blank">
             <img src="${static.url('images/tutor-logo.png')}" alt="Runs on Tutor" width="57" />
           </a>
-        </li>
+        </li> -->
         <li>
+          <a href="${footer['openedx_link']['url']}" rel="noopener" target="_blank">
+            <img src="${static.url('images/logo.png')}"  alt="${_('{platform_name} Home Page').format(platform_name=static.get_platform_name())}" 
+            itemprop="logo"
+            style="width: 79px;" />
+          </a>
+        </li>
+        <!-- <li>
+          <a href="${footer['openedx_link']['url']}" rel="noopener" target="_blank">
+            <img src="${static.url('images/openedx-logo.png')}" alt="${footer['openedx_link']['title']}" width="79" />
+          </a>
+        </li> -->
+        <p>Global Institute for Community Empowerment(GIFCE) is an online learning platform  for social impact organizations.</p>
+        <li>
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-youtube"></i>
+          <i class="fa fa-linkedIn"></i>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="col-4">
+      <div>
+        <h1>Quick Links</h1>
+        <ul>
+          <li>
+            <a href="/about">About Us</a>
+            <a href="#">Term of Use</a>
+            <a href="#">Privacy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-4"></div>
+      <div>
+        <h1>Company</h1>
+        <ul>
+          <li>
+            <a href="/courses">Courses</a>
+          </li>
+            <li>
           <a href="${footer['openedx_link']['url']}" rel="noopener" target="_blank">
             <img src="${static.url('images/openedx-logo.png')}" alt="${footer['openedx_link']['title']}" width="79" />
           </a>
         </li>
-      </ul>
+        </ul>
+      </div>
     </div>
     {% if INDIGO_FOOTER_NAV_LINKS %}
     <nav class="nav-colophon" aria-label="${_('About')}">
